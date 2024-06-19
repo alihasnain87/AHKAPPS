@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHK APPS - About</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed; /* Fix the navigation bar to the top */
+            top: 0;
+            left: 0;
+            width: 100%; /* Make the navigation bar span the full width */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 2rem; /* Larger font size */
+            font-weight: bold; /* Bold font weight */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Increased letter spacing */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Display the list items in a row */
+            justify-content: center; /* Center align the items horizontally */
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 10px 20px; /* Padding for the link */
+            border: 2px solid transparent; /* Transparent border initially */
+            border-radius: 4px; /* Rounded corners */
+            transition: color 0.3s, border-color 0.3s; /* Transition for color and border */
+        }
+
+        nav ul li.active a {
+            color: lime; /* Color for active link */
+            border-color: #ffc107; /* Border color for active link */
+        }
+
+        nav ul li a:hover {
+            color: lime; /* Color on hover */
+            border-color: #ffc107; /* Border color on hover */
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Position the underline below the text */
+            left: 0;
+            width: 0; /* Initially no width */
+            height: 2px; /* Height of the underline */
+            background-color: #ffc107; /* Color of the underline */
+            transition: width 0.3s ease-out; /* Animation duration and easing for underline */
+        }
+
+        nav ul li.active a::before,
+        nav ul li a:hover::before {
+            width: 100%; /* Expand the underline on hover or for active link */
+        }
+
+        /* Content Styles */
+        .content {
+            padding: 20px;
+            margin-top: 100px; /* Adjusted margin-top for padding between nav bar and content */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .feature-item h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .feature-item p {
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .developer-info {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .developer-info p {
+            margin: 0;
+            font-style: italic;
+            color: #666;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- Navigation Bar -->
+<nav>
+    <h1>AHK APPS</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./Download.html">Download</a></li>
+        <li class="active"><a href="#">About</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="content">
+        <div class="feature-item">
+            <h2>Real-time Transaction Tracking</h2>
+            <p>Record and monitor financial transactions in real-time for accurate financial management.</p>
+        </div>
+
+        <div class="feature-item">
+            <h2>Data Export to Excel</h2>
+            <p>Easily export transaction data to Excel format for detailed analysis and reporting.</p>
+        </div>
+
+        <div class="feature-item">
+            <h2>User-friendly Interface</h2>
+            <p>Intuitive and easy-to-navigate interface designed to streamline user experience.</p>
+        </div>
+
+        <!-- Developer Information -->
+        <div class="developer-info">
+            <p>Developed by <strong>Ali Hasnain</strong></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
